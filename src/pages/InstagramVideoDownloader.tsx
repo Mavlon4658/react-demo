@@ -9,7 +9,18 @@ import FAQ from "@/components/FAQ";
 const InstagramVideoDownloader = () => {
     const [url, setUrl] = useState("");
     const [isLoading, setIsLoading] = useState(false);
-    const [downloadResult, setDownloadResult] = useState(null);
+    const [downloadResult, setDownloadResult] = useState({
+        title: "Epic Sunset Timelapse - Bali Indonesia",
+        thumbnail: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop",
+        duration: "2:45",
+        quality: "1080p HD",
+        size: "15.2 MB",
+        views: "125.4K",
+        creator: "@travel_adventures",
+        uploadDate: "2 days ago",
+        description: "Breathtaking sunset captured during golden hour at Tanah Lot Temple. Shot with Sony A7III.",
+        downloadUrl: "#"
+    });
     const { toast } = useToast();
 
     const handleDownload = async () => {

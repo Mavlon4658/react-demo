@@ -9,7 +9,21 @@ import FAQ from "@/components/FAQ";
 const InstagramReelsDownloader = () => {
     const [url, setUrl] = useState("");
     const [isLoading, setIsLoading] = useState(false);
-    const [downloadResult, setDownloadResult] = useState(null);
+    const [downloadResult, setDownloadResult] = useState({
+        title: "5 Life Hacks You Need to Know! 🔥",
+        thumbnail: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=300&h=400&fit=crop",
+        duration: "0:30",
+        quality: "1080p HD",
+        size: "8.7 MB",
+        hasAudio: true,
+        creator: "@lifehacks_daily",
+        views: "458.2K",
+        likes: "12.3K",
+        uploadDate: "1 day ago",
+        description: "Mind-blowing life hacks that will change your daily routine forever! Try these at home 🏠✨",
+        hashtags: "#lifehacks #viral #trending #diy #tips",
+        downloadUrl: "#"
+    });
     const { toast } = useToast();
 
     const handleDownload = async () => {

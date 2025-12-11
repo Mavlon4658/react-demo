@@ -9,7 +9,20 @@ import FAQ from "@/components/FAQ";
 const CarouselDownloader = () => {
     const [url, setUrl] = useState("");
     const [isLoading, setIsLoading] = useState(false);
-    const [downloadResult, setDownloadResult] = useState(null);
+    const [downloadResult, setDownloadResult] = useState({
+        items: [
+            { id: 1, type: "image", thumbnail: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop", size: "2.1 MB", caption: "Mountain sunrise view" },
+            { id: 2, type: "image", thumbnail: "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?w=200&h=200&fit=crop", size: "1.8 MB", caption: "Crystal clear lake" },
+            { id: 3, type: "video", thumbnail: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=200&h=200&fit=crop", size: "5.2 MB", caption: "Ocean waves timelapse" },
+            { id: 4, type: "image", thumbnail: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=200&h=200&fit=crop", size: "2.3 MB", caption: "Forest hiking trail" },
+            { id: 5, type: "image", thumbnail: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=200&h=200&fit=crop", size: "1.9 MB", caption: "Adventure summit" }
+        ],
+        totalSize: "13.3 MB",
+        zipName: "travel_adventure_carousel.zip",
+        creator: "@nature_explorer",
+        postDate: "3 hours ago",
+        likes: "2,847"
+    });
     const { toast } = useToast();
 
     const handleDownload = async () => {
@@ -121,7 +134,7 @@ const CarouselDownloader = () => {
                                     Download Instagram Carousels
                                 </h2>
                                 <p className="text-muted-foreground">
-                                    Get all images and videos from carousel posts
+                                    asdlfkjasdf Get all images and videos from carousel posts
                                 </p>
                             </div>
 

@@ -9,7 +9,46 @@ import FAQ from "@/components/FAQ";
 const StorySaver = () => {
     const [url, setUrl] = useState("");
     const [isLoading, setIsLoading] = useState(false);
-    const [downloadResult, setDownloadResult] = useState(null);
+    const [downloadResult, setDownloadResult] = useState({
+        stories: [
+            {
+                id: 1,
+                type: "image",
+                thumbnail: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=350&fit=crop",
+                timestamp: "2h ago",
+                duration: null,
+                size: "1.2 MB"
+            },
+            {
+                id: 2,
+                type: "video",
+                thumbnail: "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?w=200&h=350&fit=crop",
+                timestamp: "4h ago",
+                duration: "15s",
+                size: "3.8 MB"
+            },
+            {
+                id: 3,
+                type: "image",
+                thumbnail: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=200&h=350&fit=crop",
+                timestamp: "6h ago",
+                duration: null,
+                size: "0.9 MB"
+            },
+            {
+                id: 4,
+                type: "video",
+                thumbnail: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=200&h=350&fit=crop",
+                timestamp: "8h ago",
+                duration: "12s",
+                size: "4.1 MB"
+            }
+        ],
+        username: "@adventure_stories",
+        profilePic: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=60&h=60&fit=crop&crop=face",
+        totalItems: 4,
+        totalSize: "10.0 MB"
+    });
     const { toast } = useToast();
 
     const handleDownload = async () => {

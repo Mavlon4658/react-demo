@@ -13,7 +13,38 @@ const Hero = () => {
     const { toast } = useToast();
     const [url, setUrl] = useState("");
     const [isLoading, setIsLoading] = useState(false);
-    const [accountData, setAccountData] = useState(null);
+    const [accountData, setAccountData] = useState({
+        username: "nikolaev_dimitrii",
+        fullName: "Dimitrii Nikolaev",
+        profilePic: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80&h=80&fit=crop&crop=face",
+        followers: "776",
+        following: "342",
+        posts: "245",
+        isPrivate: false,
+        bio: "Photographer | Travel enthusiast | Coffee lover",
+        content: {
+            posts: [
+                { id: 1, type: "image", thumbnail: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=300&fit=crop", caption: "Beautiful landscape", likes: 1234, date: "2024-01-15", description: "Amazing sunset over the mountains during my hiking trip" },
+                { id: 2, type: "video", thumbnail: "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?w=300&h=300&fit=crop", caption: "Adventure video", likes: 856, date: "2024-01-12", description: "Epic adventure compilation from last weekend" },
+                { id: 3, type: "gallery", thumbnail: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=300&h=300&fit=crop", caption: "Ocean view", likes: 2100, date: "2024-01-10", description: "Crystal clear waters and perfect weather" },
+                { id: 4, type: "image", thumbnail: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=300&h=300&fit=crop", caption: "Forest path", likes: 743, date: "2024-01-08", description: "Peaceful morning walk through ancient woods" },
+                { id: 5, type: "video", thumbnail: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=300&fit=crop", caption: "Sunset timelapse", likes: 1567, date: "2024-01-05", description: "30-minute sunset condensed into 30 seconds" },
+                { id: 6, type: "image", thumbnail: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=300&h=300&fit=crop", caption: "Mountain peak", likes: 945, date: "2024-01-03", description: "Reached the summit after 6 hours of climbing" }
+            ],
+            stories: [
+                { id: 1, thumbnail: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=300&fit=crop", title: "Today's adventure", type: "video", likes: 234, date: "2024-01-16", description: "Behind the scenes of today's shoot" },
+                { id: 2, thumbnail: "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?w=300&h=300&fit=crop", title: "Coffee time", type: "image", likes: 156, date: "2024-01-16", description: "Perfect morning brew setup" }
+            ],
+            highlights: [
+                { id: 1, thumbnail: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=300&h=300&fit=crop", title: "Travel", type: "gallery", likes: 1890, date: "2024-01-01", description: "Best moments from 2023 travels" },
+                { id: 2, thumbnail: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=300&h=300&fit=crop", title: "Photography", type: "gallery", likes: 1234, date: "2023-12-20", description: "Photography tips and tricks collection" }
+            ],
+            reels: [
+                { id: 1, thumbnail: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=300&fit=crop", caption: "Quick editing tips", type: "video", likes: 3456, date: "2024-01-14", description: "5 editing tricks every photographer should know" },
+                { id: 2, thumbnail: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=300&h=300&fit=crop", caption: "Behind the scenes", type: "video", likes: 2190, date: "2024-01-11", description: "How I set up this mountain shot" }
+            ]
+        }
+    });
     const [activeTab, setActiveTab] = useState("posts");
     const [selectedItems, setSelectedItems] = useState<Set<string>>(new Set());
 

@@ -33,7 +33,14 @@ const Hero = () => {
             ],
             stories: [
                 { id: 1, thumbnail: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=300&fit=crop", title: "Today's adventure", type: "video", likes: 234, date: "2024-01-16", description: "Behind the scenes of today's shoot" },
-                { id: 2, thumbnail: "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?w=300&h=300&fit=crop", title: "Coffee time", type: "image", likes: 156, date: "2024-01-16", description: "Perfect morning brew setup" }
+                { id: 2, thumbnail: "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?w=300&h=300&fit=crop", title: "Coffee time", type: "image", likes: 156, date: "2024-01-16", description: "Perfect morning brew setup" },
+                { id: 2, thumbnail: "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?w=300&h=300&fit=crop", title: "Coffee time", type: "image", likes: 156, date: "2024-01-16", description: "Perfect morning brew setup" },
+                { id: 2, thumbnail: "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?w=300&h=300&fit=crop", title: "Coffee time", type: "image", likes: 156, date: "2024-01-16", description: "Perfect morning brew setup" },
+                { id: 2, thumbnail: "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?w=300&h=300&fit=crop", title: "Coffee time", type: "image", likes: 156, date: "2024-01-16", description: "Perfect morning brew setup" },
+                { id: 2, thumbnail: "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?w=300&h=300&fit=crop", title: "Coffee time", type: "image", likes: 156, date: "2024-01-16", description: "Perfect morning brew setup" },
+                { id: 2, thumbnail: "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?w=300&h=300&fit=crop", title: "Coffee time", type: "image", likes: 156, date: "2024-01-16", description: "Perfect morning brew setup" },
+                { id: 2, thumbnail: "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?w=300&h=300&fit=crop", title: "Coffee time", type: "image", likes: 156, date: "2024-01-16", description: "Perfect morning brew setup" },
+                { id: 2, thumbnail: "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?w=300&h=300&fit=crop", title: "Coffee time", type: "image", likes: 156, date: "2024-01-16", description: "Perfect morning brew setup" },
             ],
             highlights: [
                 { id: 1, thumbnail: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=300&h=300&fit=crop", title: "Travel", type: "gallery", likes: 1890, date: "2024-01-01", description: "Best moments from 2023 travels" },
@@ -45,7 +52,7 @@ const Hero = () => {
             ]
         }
     });
-    const [activeTab, setActiveTab] = useState("posts");
+    const [activeTab, setActiveTab] = useState("stories");
     const [selectedItems, setSelectedItems] = useState<Set<string>>(new Set());
 
     const handleDownload = () => {
